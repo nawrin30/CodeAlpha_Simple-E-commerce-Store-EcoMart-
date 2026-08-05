@@ -2,7 +2,17 @@
 
 EcoMart is a modern, responsive, and eco-conscious full-stack e-commerce web application built for a university assignment project. It features a complete shopping workflow—including dynamic product browsing, responsive UI, full client-side cart state management, checkout with Cash on Delivery (COD), order persistence, user authentication, and RESTful Django backend APIs connected to an SQLite database.
 
+## Live Demo: https://github.com/nawrin30/CodeAlpha_Simple-E-commerce-Store-EcoMart-/settings/pages 
 ---
+## Dashboard Preview
+![homepage](./assets/homepage.png)
+![category](./assets/category.png)
+![customer](./assets/customer.png)
+![account](./assets/account.png)
+![shop](./assets/shop.png)
+![cart](./assets/cart.png)
+
+
 
 ## 🌿 Features Overview
 

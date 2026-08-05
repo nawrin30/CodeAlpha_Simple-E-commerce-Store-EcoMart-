@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - EcoMart</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search eco-friendly products...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="login.html" id="authLink">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="auth-section container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <i class="fa-solid fa-user-plus auth-icon"></i>
+                <h2>Create an Account</h2>
+                <p>Join our eco-conscious community and start shopping sustainably</p>
+            </div>
+
+           
+            <div class="alert-box hidden" id="authAlert"></div>
+
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="username">Username *</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="username" required placeholder="Choose a unique username">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-envelope input-icon"></i>
+                        <input type="email" id="email" required placeholder="Enter your email address">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password *</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-lock input-icon"></i>
+                        <input type="password" id="password" required placeholder="Minimum 8 characters">
+                    </div>
+                    <small class="form-hint">Must contain at least 8 characters, 1 uppercase, 1 number.</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password *</label>
+                    <div class="input-icon-wrapper">
+                        <i class="fa-solid fa-shield-halved input-icon"></i>
+                        <input type="password" id="confirmPassword" required placeholder="Re-enter your password">
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <label class="remember-me">
+                        <input type="checkbox" id="termsCheck" required> I agree to the <a href="#">Terms & Conditions</a>
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block btn-lg" id="registerBtn">
+                    Create Account <i class="fa-solid fa-user-check"></i>
+                </button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Already have an account? <a href="login.html">Sign In</a></p>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo light">
+                    <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+                </a>
+                <p>Empowering eco-friendly living with high-quality, sustainable, and ethically sourced alternatives.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe for tips on sustainable living and exclusive discounts.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EcoMart. All rights reserved. University Assignment Project.</p>
+        </div>
+    </footer>
+
+  
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoMart - Sustainable & Eco-Friendly Shopping</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search eco-friendly products...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="#" id="authLink">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+   
+    <section class="hero">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <span class="badge">100% Sustainable & Organic</span>
+                <h1>Go Green with Every Purchase</h1>
+                <p>Discover high-quality eco-friendly products designed to minimize environmental impact without compromising on luxury or daily convenience.</p>
+                <div class="hero-btns">
+                    <a href="products.html" class="btn btn-primary">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#categories" class="btn btn-outline">Explore Categories</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" alt="Eco-friendly living essentials">
+            </div>
+        </div>
+    </section>
+
+   
+    <section class="features-bar">
+        <div class="container features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-truck-fast"></i>
+                <div>
+                    <h4>Zero-Emission Shipping</h4>
+                    <p>Free carbon-neutral delivery on orders over $50</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-recycle"></i>
+                <div>
+                    <h4>100% Recyclable</h4>
+                    <p>All packaging is biodegradable</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                    <h4>Ethical Sourcing</h4>
+                    <p>Fair-trade certified partners worldwide</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="categories container" id="categories">
+        <div class="section-title">
+            <h2>Featured Categories</h2>
+            <p>Explore our curated list of sustainable everyday items</p>
+        </div>
+        <div class="category-grid" id="categoryContainer">
+            
+            <a href="products.html?category=kitchen" class="category-card">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=500&q=80" alt="Zero Waste Kitchen">
+                <div class="category-info">
+                    <h3>Kitchen Essentials</h3>
+                    <span>12 Products</span>
+                </div>
+            </a>
+            <a href="products.html?category=personal-care" class="category-card">
+    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80">
+    <div class="category-info">
+        <h3>Personal Care</h3>
+        <span>18 Products</span>
+    </div>
+</a>
+            <a href="products.html?category=home" class="category-card">
+                <img src="https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=500&q=80" alt="Home & Living">
+                <div class="category-info">
+                    <h3>Home & Decor</h3>
+                    <span>15 Products</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section class="products-section container">
+        <div class="section-title">
+            <h2>Featured Products</h2>
+            <p>Our top-rated best sellers chosen by eco-conscious shoppers</p>
+        </div>
+        <div class="product-grid" id="featuredProductsContainer">
+            <!-- Products rendered dynamically via app.js -->
+        </div>
+    </section>
+
+    
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Customers Say</h2>
+                <p>Real feedback from our sustainable living community</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"EcoMart made switching to a zero-waste lifestyle seamless. The bamboo kitchen set is durable and elegant!"</p>
+                    <div class="user-info">
+                        <strong>Sarah Jenkins</strong>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>"Fast carbon-neutral shipping and zero plastic packaging. Highly recommend their organic skincare products."</p>
+                    <div class="user-info">
+                        <strong>Michael Chen</strong>
+                        <span>Verified Buyer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo light">
+                    <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+                </a>
+                <p>Empowering eco-friendly living with high-quality, sustainable, and ethically sourced alternatives.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe for tips on sustainable living and exclusive discounts.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EcoMart. All rights reserved. University Assignment Project.</p>
+        </div>
+    </footer>
+
+   
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>

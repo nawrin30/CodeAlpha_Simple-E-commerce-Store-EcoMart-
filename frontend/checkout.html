@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - EcoMart</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+   
+    <header class="header">
+        <nav class="navbar container">
+            <a href="index.html" class="logo">
+                <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+            </a>
+
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search eco-friendly products...">
+                <button type="button" id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Shop</a></li>
+                <li><a href="#" id="authLink">Login</a></li>
+            </ul>
+
+            <div class="nav-icons">
+                <a href="cart.html" class="cart-icon" title="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-badge" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    
+    <section class="page-banner">
+        <div class="container">
+            <h1>Checkout</h1>
+            <p>Complete your eco-friendly purchase securely</p>
+        </div>
+    </section>
+
+    
+    <section class="checkout-section container">
+        <div class="checkout-layout" id="checkoutLayout">
+       
+            <div class="checkout-form-container">
+                <h2>Shipping & Contact Information</h2>
+                <form id="checkoutForm" class="checkout-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" required placeholder="John">
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" required placeholder="Doe">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="john.doe@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="+1 234 567 8900">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Street Address *</label>
+                        <input type="text" id="address" required placeholder="123 Eco Way, Apt 4B">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="city">City *</label>
+                            <input type="text" id="city" required placeholder="Green City">
+                        </div>
+                        <div class="form-group">
+                            <label for="zipCode">Postal / Zip Code *</label>
+                            <input type="text" id="zipCode" required placeholder="10001">
+                        </div>
+                    </div>
+
+                    <h2 class="section-subtitle">Payment Method</h2>
+                    <div class="payment-method-box">
+                        <div class="radio-option">
+                            <input type="radio" id="cod" name="paymentMethod" value="COD" checked>
+                            <label for="cod">
+                                <i class="fa-solid fa-hand-holding-dollar"></i>
+                                <div>
+                                    <strong>Cash on Delivery (COD)</strong>
+                                    <p>Pay with cash upon arrival at your doorstep.</p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block btn-lg" id="placeOrderBtn">
+                        Place Order (Cash on Delivery)
+                    </button>
+                </form>
+            </div>
+
+            <div class="checkout-summary-card">
+                <h3>Your Order Summary</h3>
+                <div class="checkout-items-list" id="checkoutItemsList">
+                   
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="checkoutSubtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Eco Shipping</span>
+                    <span id="checkoutShipping">Free</span>
+                </div>
+                <div class="summary-row">
+                    <span>Tax</span>
+                    <span id="checkoutTax">$0.00</span>
+                </div>
+                <hr class="summary-divider">
+                <div class="summary-row total-row">
+                    <span>Total Amount</span>
+                    <span id="checkoutTotal">$0.00</span>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="order-confirmation-card hidden" id="orderConfirmationCard">
+            <div class="confirmation-icon">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2>Order Placed Successfully!</h2>
+            <p class="confirmation-subtitle">Thank you for supporting sustainable products.</p>
+            <div class="order-details-box">
+                <p><strong>Order ID:</strong> <span id="confirmedOrderId">#ECO-10023</span></p>
+                <p><strong>Payment Method:</strong> Cash on Delivery</p>
+                <p><strong>Estimated Delivery:</strong> 3-5 Business Days</p>
+            </div>
+            <div class="confirmation-actions">
+                <a href="products.html" class="btn btn-primary">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+
+   
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <a href="index.html" class="logo light">
+                    <i class="fa-solid fa-leaf logo-icon"></i> Eco<span>Mart</span>
+                </a>
+                <p>Empowering eco-friendly living with high-quality, sustainable, and ethically sourced alternatives.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Shop All</a></li>
+                    <li><a href="cart.html">Shopping Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Customer Support</h4>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Return & Refund</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p>Subscribe for tips on sustainable living and exclusive discounts.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn btn-primary">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EcoMart. All rights reserved. University Assignment Project.</p>
+        </div>
+    </footer>
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/app.js"></script>
+</body>
+</html>
